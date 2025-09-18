@@ -10,7 +10,7 @@ const HeroText = () => {
       <p className="mt-4 inline-block bg-secondary text-black px-4 py-2 rounded-md text-sm font-semibold uppercase tracking-wide">
         Backend Developer
       </p>
-      <p className="mt-6 text-grey leading-relaxed max-w-lg mx-auto lg:mx-0 text-sm">
+      <p className="mt-6 text-grey leading-relaxed max-w-lg mx-auto lg:mx-0 text-sm md:text-base">
         Passionate about building scalable, secure, and high-performance
         server-side applications. Experienced with Node.js, Express, RESTful
         APIs, databases, and cloud deployment. Focused on writing clean,

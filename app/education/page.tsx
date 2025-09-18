@@ -29,11 +29,19 @@ const Education: React.FC = () => {
       </h2>
       <div className="max-w-6xl mx-auto mt-10 flex flex-col lg:flex-row gap-12 items-center justify-between w-full">
         <p className="text-grey lg:w-1/2 leading-relaxed max-w-2xl text-center lg:text-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          eleifend massa sed leo molestie ultrices in non mi. Suspendisse mollis
-          nisi et accumsan pretium. Fusce dignissim dignissim odio, convallis
-          feugiat ligula. Curabitur tristique, tortor sed vestibulum vehicula,
-          quam lacus.
+          My educational journey has shaped both my technical expertise and
+          problem-solving mindset. I started with a strong foundation in{" "}
+          <span className="text-secondary">Computer Science</span>, where I
+          gained core knowledge in programming, algorithms, and system design.
+          Over time, I advanced into specialized areas such as{" "}
+          <span className="text-secondary">Backend Development</span>,
+          <span className="text-secondary">Databases</span>, and{" "}
+          <span className="text-secondary">Cloud Technologies</span>. Alongside
+          formal studies, I continuously sharpened my skills through online
+          certifications, hands-on projects, and real-world application of
+          modern technologies. This blend of academic training and practical
+          learning has prepared me to build scalable, secure, and efficient
+          solutions for today’s digital challenges.
         </p>
         <div className="lg:w-1/2 w-full">
           <h3 className="text-4xl md:text-6xl font-extrabold text-secondary/70 mb-8 text-center lg:text-left">

@@ -3,18 +3,23 @@ import Image from "next/image";
 const ProfileImage = () => {
   return (
     <div className="md:w-1/2 relative flex justify-center md:justify-start">
+      <div className="absolute inset-0 flex justify-center md:justify-start">
+        <div className="w-72 sm:w-96 md:w-[420px] h-72 sm:h-96 md:h-[420px] rounded-lg bg-gradient-to-r from-secondary via-purple-500 to-pink-500 blur-3xl opacity-40" />
+      </div>
+
       <Image
         src="/yusuf-img.png"
         alt="Yusuf Usman"
-        width={320}
-        height={320}
-        className="w-48 sm:w-64 md:w-72 lg:w-80 rounded-lg grayscale shadow-lg"
+        width={500}
+        height={500}
+        className="relative w-64 sm:w-80 md:w-96 lg:w-[420px] rounded-lg grayscale shadow-lg"
       />
-      <div className="absolute top-0 right-0 grid grid-cols-4 gap-2 p-4">
+
+      <div className="absolute top-0 right-0 grid grid-cols-4 gap-3 p-6">
         {Array.from({ length: 16 }).map((_, index) => (
           <div
             key={index}
-            className="w-2 h-2 bg-secondary rounded-full opacity-40"
+            className="w-3 h-3 bg-secondary rounded-full opacity-50"
           />
         ))}
       </div>

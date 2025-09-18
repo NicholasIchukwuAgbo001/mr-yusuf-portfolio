@@ -1,9 +1,14 @@
 const skills: string[] = [
-  "SOCIAL MEDIA",
-  "DESIGN",
-  "READING",
-  "DATA ANALYST",
-  "PHOTOGRAPHY",
+  "Java",
+  "Python",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "SQL",
+  "REST APIs",
+  "Authentication",
+  "Cloud Deployment",
+  "Problem Solving",
 ];
 
 const BioText = () => {
@@ -16,16 +21,18 @@ const BioText = () => {
       </h2>
 
       <p className="text-grey mb-4 leading-relaxed text-sm sm:text-base max-w-lg">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit
-        amet massa sed leo molestie ultrices in non mi. Suspendisse mollis
-        nisl at aliquet pretium. Suspendisse dignissim, odio non hendrerit
-        suscipit, lorem ipsum tempus tortor, suscipit vestibulum velit quam
-        nec nibh.
+        I am a passionate <span className="text-secondary font-semibold">Backend Developer </span> 
+        dedicated to building scalable, secure, and efficient server-side 
+        applications. My work focuses on architecting RESTful APIs, designing 
+        robust database schemas, and ensuring high-performance systems that 
+        can handle real-world demands.
       </p>
 
       <p className="text-grey mb-6 text-sm sm:text-base max-w-lg">
-        Aliquam luctus faucibus augue, in porttitor eros imperdiet sit amet.
-        Vivamus vel tortor at risus vestibulum elementum accumsan id ante.
+        With experience in <span className="font-medium">Java, Python, Node.js, Go, Django, Move and databases like MongoDB and SQL</span>, 
+        I specialize in authentication, cloud deployment, and performance 
+        optimization. I enjoy solving complex problems, writing clean code, 
+        and collaborating to deliver seamless digital experiences.
       </p>
 
       <h3 className="text-lg font-semibold mb-3">Skills & Interests</h3>

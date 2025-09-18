@@ -1,35 +1,46 @@
-"use client";
+"use client"
 
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 const HeroImage = () => {
   return (
-    <div className="relative flex items-center justify-center">
+    <motion.div
+      className="relative"
+      animate={{ y: [0, -10, 0] }}
+      transition={{
+        duration: 2,
+        repeat: Infinity,
+        repeatType: "loop",
+        ease: "easeInOut",
+      }}
+    >
       <motion.div
-        className="absolute rounded-full p-[4px] bg-gradient-to-tr from-secondary via-purple-500 to-pink-500"
-        animate={{ rotate: 360 }}
-        transition={{
-          repeat: Infinity,
-          duration: 8,
-          ease: "linear",
-        }}
+        className="absolute inset-0 rounded-lg blur-2xl opacity-40"
         style={{
-          width: "18rem",
-          height: "18rem",
+          background: "linear-gradient(90deg, #38bdf8, #a855f7, #ec4899)",
         }}
-      >
-        <div className="w-full h-full bg-slate-950 rounded-full" />
-      </motion.div>
+        animate={{
+          scale: [1, 1.1, 1],
+          rotate: [0, 10, -10, 0],
+          opacity: [0.3, 0.5, 0.3],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          repeatType: "mirror",
+          ease: "easeInOut",
+        }}
+      ></motion.div>
       <Image
         src="/yusuf-img.png"
         alt="Yusuf Usman image"
         width={400}
         height={500}
-        className="relative z-10 w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-xl"
+        className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] object-cover rounded-lg shadow-lg cursor-not-allowed"
         priority
       />
-    </div>
+    </motion.div>
   );
 };
 
