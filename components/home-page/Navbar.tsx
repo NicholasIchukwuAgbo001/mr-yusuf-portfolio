@@ -32,7 +32,7 @@ const NavBar = () => {
               <Link
                 href={item.href}
                 className={`transition-colors duration-300 ${
-                  isActive ? "text-secondary font-semibold" : "hover:secondary/70"
+                  isActive ? "text-secondary font-semibold" : "hover:text-secondary/90"
                 }`}
               >
                 {item.label}
