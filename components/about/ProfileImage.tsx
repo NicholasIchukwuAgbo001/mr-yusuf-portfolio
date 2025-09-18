@@ -4,7 +4,7 @@ const ProfileImage = () => {
   return (
     <div className="md:w-1/2 relative flex justify-center md:justify-start">
       <Image
-        src="niko.png"
+        src="/yusuf-img.png"
         alt="Yusuf Usman"
         width={320}
         height={320}
