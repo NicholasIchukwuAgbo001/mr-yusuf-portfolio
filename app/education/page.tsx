@@ -1,31 +1,8 @@
-import React from "react";
 import EducationCard from "@/components/education/EducationCard";
+import {education} from "@/data/educationInfo"
 
-interface EducationItem {
-  title: string;
-  subtitle: string;
-}
 
-const education: EducationItem[] = [
-  {
-    title: "Senior High School",
-    subtitle: "School Money | 2012",
-  },
-  {
-    title: "Bachelor Degree",
-    subtitle: "University | Business Management | 2017",
-  },
-  {
-    title: "Master Degree",
-    subtitle: "University | Master of Communication | 2019",
-  },
-  {
-    title: "Tech Program",
-    subtitle: "Semicolon | Software Engineer | 2024",
-  },
-];
-
-const Education: React.FC = () => {
+const Education = () => {
   return (
     <section className="text-white px-6 py-16 flex flex-col items-center">
       <h2 className="text-3xl md:text-4xl font-bold text-center border-b-2 border-secondary inline-block pb-2">
