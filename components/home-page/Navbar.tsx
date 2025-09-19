@@ -16,23 +16,23 @@ const navLists: NavItem[] = [
   { label: "Contact", href: "/contact" },
 ];
 
-const NavBar = () => {
+const Navbar = ({ onLinkClick }: { onLinkClick?: () => void }) => {
   const pathname = usePathname();
 
   return (
     <nav>
-      <ul className="flex space-x-8 text-sm uppercase tracking-wide text-grey">
+      <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-sm uppercase tracking-wide text-grey">
         {navLists.map((item) => {
           const isActive = pathname === item.href;
           return (
-            <li
-              key={item.label}
-              className="cursor-pointer transition-colors duration-300"
-            >
+            <li key={item.label}>
               <Link
                 href={item.href}
-                className={`transition-colors duration-300 ${
-                  isActive ? "text-secondary font-semibold" : "hover:text-secondary/90"
+                onClick={onLinkClick} 
+                className={`block transition-colors duration-300 ${
+                  isActive
+                    ? "text-secondary font-semibold"
+                    : "hover:text-secondary/90"
                 }`}
               >
                 {item.label}
@@ -45,4 +45,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;
