@@ -9,7 +9,6 @@ import {
   FaWhatsapp,
   FaYoutube,
   FaGithub,
-  FaTiktok,
 } from "react-icons/fa";
 import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md";
 import ContactCard from "@/components/contact/ContactCard";
