@@ -9,66 +9,72 @@ import {
   FaWhatsapp,
   FaYoutube,
   FaGithub,
+  FaTiktok,
 } from "react-icons/fa";
 import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md";
 import ContactCard from "@/components/contact/ContactCard";
 
 interface ContactItem {
   icon: ReactElement;
-  title: string;
-  details: string[];
+  url: string;
+  hoverColor: string;
+  hoverBgColor: string;
 }
 
 const contacts: ContactItem[] = [
   {
-    icon: <MdPhone className="w-8 h-8 text-secondary" />,
-    title: "Phone & Mobile",
-    details: ["123-456-7890", "+123-456-7890"],
+    icon: <MdPhone className="w-8 h-8" />,
+    url: "tel:+2348169025216",
+    hoverColor: "text-white",
+    hoverBgColor: "hover:bg-green-500",
   },
   {
-    icon: <MdEmail className="w-8 h-8 text-secondary" />,
-    title: "Email & Website",
-    details: ["hello@reallygreatsite.com", "reallygreatsite.com"],
+    icon: <MdEmail className="w-8 h-8" />,
+    url: "mailto:hello@reallygreatsite.com",
+    hoverColor: "text-white",
+    hoverBgColor: "hover:bg-red-500",
   },
   {
-    icon: <MdLocationOn className="w-8 h-8 text-secondary" />,
-    title: "Address",
-    details: ["123 Anywhere St, Any City, ST 12345"],
+    icon: <FaLinkedin className="w-8 h-8" />,
+    url: "https://linkedin.com/in/yourprofile",
+    hoverColor: "text-white",
+    hoverBgColor: "hover:bg-blue-600",
   },
   {
-    icon: <FaLinkedin className="w-8 h-8 text-secondary" />,
-    title: "LinkedIn",
-    details: ["linkedin.com/in/yourprofile"],
+    icon: <FaFacebook className="w-8 h-8" />,
+    url: "https://facebook.com/yourpage",
+    hoverColor: "text-white",
+    hoverBgColor: "hover:bg-blue-500",
   },
   {
-    icon: <FaFacebook className="w-8 h-8 text-secondary" />,
-    title: "Facebook",
-    details: ["facebook.com/yourpage"],
+    icon: <FaTwitter className="w-8 h-8" />,
+    url: "https://twitter.com/yourhandle",
+    hoverColor: "text-white",
+    hoverBgColor: "hover:bg-sky-400",
   },
   {
-    icon: <FaTwitter className="w-8 h-8 text-secondary" />,
-    title: "Twitter / X",
-    details: ["twitter.com/yourhandle"],
+    icon: <FaInstagram className="w-8 h-8" />,
+    url: "https://instagram.com/yourhandle",
+    hoverColor: "text-white",
+    hoverBgColor: "hover:bg-pink-500",
   },
   {
-    icon: <FaInstagram className="w-8 h-8 text-secondary" />,
-    title: "Instagram",
-    details: ["instagram.com/yourhandle"],
+    icon: <FaWhatsapp className="w-8 h-8" />,
+    url: "https://wa.me/2348169025216",
+    hoverColor: "text-white",
+    hoverBgColor: "hover:bg-green-400",
   },
   {
-    icon: <FaWhatsapp className="w-8 h-8 text-secondary" />,
-    title: "WhatsApp",
-    details: ["+123-456-7890"],
+    icon: <FaYoutube className="w-8 h-8" />,
+    url: "https://youtube.com/@yourchannel",
+    hoverColor: "text-white",
+    hoverBgColor: "hover:bg-red-600",
   },
   {
-    icon: <FaYoutube className="w-8 h-8 text-secondary" />,
-    title: "YouTube",
-    details: ["youtube.com/@yourchannel"],
-  },
-  {
-    icon: <FaGithub className="w-8 h-8 text-secondary" />,
-    title: "GitHub",
-    details: ["github.com/yourusername"],
+    icon: <FaGithub className="w-8 h-8" />,
+    url: "https://github.com/yourusername",
+    hoverColor: "text-white",
+    hoverBgColor: "hover:bg-gray-600",
   },
 ];
 
@@ -76,24 +82,34 @@ export default function ContactSection(): ReactElement {
   return (
     <section className="text-white py-16">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold uppercase mb-2">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase mb-2">
           Get In Touch
         </h2>
-        <p className="text-secondary italic mb-12">Let&apos;s Work Together</p>
+        <p className="text-secondary italic mb-12">
+          Let&apos;s Work Together
+        </p>
 
-        <div className="grid gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-10">
           {contacts.map((item, idx) => (
             <ContactCard
               key={idx}
               icon={item.icon}
-              title={item.title}
-              details={item.details}
+              url={item.url}
+              hoverColor={item.hoverColor}
+              hoverBgColor={item.hoverBgColor}
             />
           ))}
         </div>
 
-        <div className="mt-16 border-t border-grey pt-6">
-          <h3 className="text-2xl md:text-3xl font-extrabold tracking-wider text-grey">
+        <div className="mt-12 flex justify-center items-center gap-3 text-gray-300 flex-wrap">
+          <MdLocationOn className="w-6 h-6 text-red-500" />
+          <p className="text-base sm:text-lg md:text-xl">
+            12, Epetedo Street, Lagos State
+          </p>
+        </div>
+
+        <div className="mt-16 border-t border-gray-700 pt-6">
+          <h3 className="text-lg sm:text-2xl md:text-3xl font-extrabold tracking-wider text-gray-400">
             YUSUF USMAN
           </h3>
         </div>
