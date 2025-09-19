@@ -29,7 +29,7 @@ const contacts: ContactItem[] = [
   },
   {
     icon: <MdEmail className="w-8 h-8" />,
-    url: "mailto:hello@reallygreatsite.com",
+    url: "mailto:ichukwunicholas@gmail.com",
     hoverColor: "text-white",
     hoverBgColor: "hover:bg-red-500",
   },
