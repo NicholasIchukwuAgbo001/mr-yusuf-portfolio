@@ -1,7 +1,17 @@
 "use client";
 
 import React, { ReactElement } from "react";
-import { Phone, Mail, MapPin, Heart } from "lucide-react";
+import {
+  FaLinkedin,
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaWhatsapp,
+  FaYoutube,
+  FaGithub,
+} from "react-icons/fa";
+import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md";
+import ContactCard from "@/components/contact/contactCard";
 
 interface ContactItem {
   icon: ReactElement;
@@ -11,24 +21,54 @@ interface ContactItem {
 
 const contacts: ContactItem[] = [
   {
-    icon: <Phone className="w-8 h-8 text-secondary" />,
+    icon: <MdPhone className="w-8 h-8 text-secondary" />,
     title: "Phone & Mobile",
     details: ["123-456-7890", "+123-456-7890"],
   },
   {
-    icon: <Mail className="w-8 h-8 text-secondary" />,
+    icon: <MdEmail className="w-8 h-8 text-secondary" />,
     title: "Email & Website",
     details: ["hello@reallygreatsite.com", "reallygreatsite.com"],
   },
   {
-    icon: <MapPin className="w-8 h-8 text-secondary" />,
+    icon: <MdLocationOn className="w-8 h-8 text-secondary" />,
     title: "Address",
     details: ["123 Anywhere St, Any City, ST 12345"],
   },
   {
-    icon: <Heart className="w-8 h-8 text-secondary" />,
-    title: "Social Media",
-    details: ["@reallygreatsite.com"],
+    icon: <FaLinkedin className="w-8 h-8 text-secondary" />,
+    title: "LinkedIn",
+    details: ["linkedin.com/in/yourprofile"],
+  },
+  {
+    icon: <FaFacebook className="w-8 h-8 text-secondary" />,
+    title: "Facebook",
+    details: ["facebook.com/yourpage"],
+  },
+  {
+    icon: <FaTwitter className="w-8 h-8 text-secondary" />,
+    title: "Twitter / X",
+    details: ["twitter.com/yourhandle"],
+  },
+  {
+    icon: <FaInstagram className="w-8 h-8 text-secondary" />,
+    title: "Instagram",
+    details: ["instagram.com/yourhandle"],
+  },
+  {
+    icon: <FaWhatsapp className="w-8 h-8 text-secondary" />,
+    title: "WhatsApp",
+    details: ["+123-456-7890"],
+  },
+  {
+    icon: <FaYoutube className="w-8 h-8 text-secondary" />,
+    title: "YouTube",
+    details: ["youtube.com/@yourchannel"],
+  },
+  {
+    icon: <FaGithub className="w-8 h-8 text-secondary" />,
+    title: "GitHub",
+    details: ["github.com/yourusername"],
   },
 ];
 
@@ -41,27 +81,14 @@ export default function ContactSection(): ReactElement {
         </h2>
         <p className="text-secondary italic mb-12">Let&apos;s Work Together</p>
 
-        <div className="grid gap-10 md:grid-cols-4">
-          {contacts.map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center space-y-4 
-                         p-6 rounded-lg bg-gray-900 shadow-md 
-                         transition-all duration-300 
-                         hover:bg-secondary/10 hover:scale-105 hover:shadow-lg"
-            >
-              <div className="p-4 rounded-full bg-gray-800 shadow-inner transition duration-300 hover:bg-secondary/20">
-                {item.icon}
-              </div>
-              <h3 className="font-semibold group-hover:text-secondary">
-                {item.title}
-              </h3>
-              <div className="space-y-1 text-sm text-grey">
-                {item.details.map((line, index) => (
-                  <p key={index}>{line}</p>
-                ))}
-              </div>
-            </div>
+        <div className="grid gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+          {contacts.map((item, idx) => (
+            <ContactCard
+              key={idx}
+              icon={item.icon}
+              title={item.title}
+              details={item.details}
+            />
           ))}
         </div>
 
