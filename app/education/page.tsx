@@ -8,16 +8,20 @@ interface EducationItem {
 
 const education: EducationItem[] = [
   {
-    title: "Senior Vocational High School",
-    subtitle: "School Of Art | 2012",
+    title: "Senior High School",
+    subtitle: "School Money | 2012",
   },
   {
     title: "Bachelor Degree",
-    subtitle: "Borcelle Art University | Graphic Design | 2017",
+    subtitle: "University | Business Management | 2017",
   },
   {
     title: "Master Degree",
-    subtitle: "Borcelle Art University | Master of Communication | 2019",
+    subtitle: "University | Master of Communication | 2019",
+  },
+  {
+    title: "Tech Program",
+    subtitle: "Semicolon | Software Engineer | 2024",
   },
 ];
 
@@ -45,7 +49,7 @@ const Education: React.FC = () => {
         </p>
         <div className="lg:w-1/2 w-full">
           <h3 className="text-4xl md:text-6xl font-extrabold text-secondary/70 mb-8 text-center lg:text-left">
-            2012 - 2019
+            2012 - 2024
           </h3>
           <div className="space-y-6">
             {education.map((item, index) => (
