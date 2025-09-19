@@ -11,7 +11,7 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md";
-import ContactCard from "@/components/contact/contactCard";
+import ContactCard from "@/components/contact/ContactCard";
 
 interface ContactItem {
   icon: ReactElement;
